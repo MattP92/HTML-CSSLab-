@@ -1,39 +1,48 @@
-button{
-    border: none; 
+header{
+    display: flex;
+    flex-direction: column; 
+    font-family: sans-serif; 
+    font-size: 0.8rem;
+    justify-content: space-between;
+}
+
+nav{
+    display: flex;
+    flex-direction: column; 
+    font-family: sans-serif; 
+    font-size: 0.8rem;
+}
+
+a{
+    padding: 5px;
+}
+
+h6{
+    margin-bottom: 10px;
+}
+
+.bottom{
+    display: flex;
+    justify-content: center;
     background-color: black;
     color: white;
-    display: flex;
-    margin: auto;
-    border-radius: 100px;
+    border-radius: 200px;
     font-family: sans-serif; 
     font-size: 0.8rem; 
+    padding: 5px;
+    width: 400px;
 }
 
 .black{
+    display: flex;
+    justify-content: center; 
     background-color: black;
     color: white;
     border-radius: 200px; 
     font-family: sans-serif; 
     font-size: 0.8rem;
     padding: 5px;
-}
-
-header,
-.heading,
-nav{
-    display: flex;
-    align-items: center;
-    font-family: sans-serif; 
-    font-size: 0.8rem;
-}
-header{
-    justify-content: space-between;
-}
-
-a{
-    margin: 20px; 
-    font-family: sans-serif; 
-    font-size: 0.8rem;
+    width: 350px
 }
 
 p{
@@ -88,7 +97,8 @@ h3{
 .circles{
     position: relative; 
     flex: 1;
-    margin-bottom: -150px
+    margin-bottom: -150px;
+    display: none; 
 }
 
 .container{
@@ -103,3 +113,41 @@ h3{
 body{ 
     background-color: #f9fafc;
 }
+
+@media only screen and (min-width:768px){
+    nav{
+        flex-direction: row;
+        justify-content: flex-end; 
+    }
+    .black{
+        justify-content: center; 
+        background-color: black;
+        color: white;
+        border-radius: 100px; 
+        font-family: sans-serif; 
+        font-size: 0.8rem;
+        padding: 5px;
+        width: 50px
+    }
+    .bottom{
+        background-color: black;
+        color: white;
+        border-radius: 100px;
+        font-family: sans-serif; 
+        font-size: 0.8rem; 
+        padding: 5px;
+        width: 100px;
+    }
+    .footer {
+        display: flex;
+        justify-content: center;
+    }
+    .circles{
+        position: relative; 
+        flex: 1;
+        margin-bottom: -150px;
+        display: block;
+    }
+}
+
+    
